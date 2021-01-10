@@ -1,0 +1,125 @@
+<html>
+<head>
+
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<!--===============================================================================================-->
+        
+</head>
+ 
+<h2><b>PENDAFTARAN</b></h2>
+
+<body>
+
+
+<!-- 01 Table -->
+<form ... onsubmit="return checkForm(this);">
+<table>
+    <tr>
+        <th>Username :</th>
+        <td><center><input type="text" name="username" id="username"></center></td>
+    </tr>
+    <tr>
+        <th>First Name :</th>
+        <td><center><input type="text" name="first_name" id="fisrtname"></center></td>
+    </tr>
+    <tr>
+        <th>Last Name :</th>
+        <td><center><input type="text" name="last_name" id="lastname"></center></td>
+    </tr>
+    <tr>
+        <th>Gender :</th>
+        <td><input type="radio" name="gender" value="Male" id="male" /><label for="Male">Male</label><br>
+            <input type="radio" name="gender" value="Female" id="female" /><label for="Female">Female</label><br>
+            <input type="radio" name="gender" value="Other" id="other" /><label for="Other">Other</label>
+            </td>
+      </tr>
+    <tr>
+        <th>Password :</th>
+        <td><input type="password" name="pwd1"></td>
+    </tr>
+    <tr>
+        <th>Retype Password :</th>
+        <td><input type="password" name="pwd2"></td>
+    </tr>
+    <tr>
+        <th>Age :</th>
+        <td><input type="number" id="age1" min="17" max="80" required></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <center><input type="submit" name="Save" id="Save"></center>
+        <td :="" hasil="">
+    </tr>
+
+  </table>
+
+
+
+<!-- Java Script -->
+
+<script type="text/javascript">
+
+    function checkForm(form)
+    {
+      if(form.username.value === "") {
+        alert("Error: Username Cannot Be Blank!");
+        form.username.focus();
+        return false;
+      }
+
+    if(form.first_name.value === "") {
+        alert("Error: First Name Cannot Be Blank!");
+        form.first_name.focus();
+        return false;
+      }
+    
+    if(form.last_name.value === "") {
+        alert("Error: Last Name Cannot Be Blank!");
+        form.last_name.focus();
+        return false;
+    }
+    
+    if(form.age1.value === "") {
+        alert("Error: Age Cannot Be Blank!");
+        form.age1.focus();
+        return false;
+
+   }
+
+    if(form.pwd1.value != "" && form.pwd1.value == form.pwd2.value) {
+      if(form.pwd1.value.length < 6) {
+        alert("Error: Password must be containing more than six characters!");
+        form.pwd1.focus();
+        return false;
+      }
+    } else {
+      alert("Error: Please check that you've entered and confirmed your password!");
+      form.pwd1.focus();
+      return false;
+   }
+
+   alert("Well Done");
+    return true;
+  }
+  
+  {
+  document.getElementById("hasil").innerHTML = form.name
+}
+
+</script>
+
+
+
+<p>==========================================</p>
+
+<p>>>> Back to home page?</p>
+
+<button id="myButton" class="float-left submit-button">HOME</button>
+
+<script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+            location.href = "../index.html";
+    };
+
+</script>

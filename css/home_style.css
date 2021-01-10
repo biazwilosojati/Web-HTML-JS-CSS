@@ -1,0 +1,21 @@
+/*//////////////////////////////////////////////////////////////////
+[ HOME STYLE TAG ]*/
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;    
+
+}
+       
+body {
+    background-image:url("../image/BG_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    font-family: calibri;
+    font-size: 15px;
+    color: rgb(216, 216, 216);
+}
+
